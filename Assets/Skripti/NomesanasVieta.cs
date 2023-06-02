@@ -35,12 +35,39 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler
 							objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[1]);
 							break;
 						case "palidziba":
-							objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[2]);
+							objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[2]);       //Pieivienotas visas skaņas, ja lietotājs trāpīja ar pareizo mašīnu pareizājā vietā
 							break;
 						case "auto":
 							objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[3]);
 							break;
-						default:
+                        case "b2":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[4]);
+                            break;
+                        case "cements":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[5]);
+                            break;
+                        case "e46":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[6]);
+                            break;
+                        case "e61":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[7]);
+                            break;
+                        case "eskavators":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[8]);
+                            break;
+                        case "policija":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[9]);
+                            break;
+                        case "tr1":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[10]);
+                            break;
+                        case "tr5":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[11]);
+                            break;
+                        case "uguns":
+                            objektuSkripts.skanasAvots.PlayOneShot(objektuSkripts.skanas[12]);
+                            break;
+                        default:
 							Debug.Log("Tags nav definēts!");
 							break;
 					}
@@ -62,7 +89,34 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler
 					case "auto":
 						objektuSkripts.autobuss.GetComponent<RectTransform>().localPosition = objektuSkripts.busKoord;
 						break;
-					default:
+                    case "b2":
+						objektuSkripts.b2.GetComponent<RectTransform>().localPosition = objektuSkripts.b2Koord;
+                        break;
+                    case "cements":
+                        objektuSkripts.cementaMasina.GetComponent<RectTransform>().localPosition = objektuSkripts.cemKoord;       //Ja lietotājs netrāpīja pareizājā vietā ar konkrēto mašīnu, tā mašīna atgriežas savā sakotnējā vietā 
+                        break;
+                    case "e46":
+                        objektuSkripts.e46.GetComponent<RectTransform>().localPosition = objektuSkripts.e46Koord;
+                        break;
+                    case "e61":
+                        objektuSkripts.e61.GetComponent<RectTransform>().localPosition = objektuSkripts.e61Koord;
+                        break;
+                    case "eskavators":
+                        objektuSkripts.eskavators.GetComponent<RectTransform>().localPosition = objektuSkripts.eskKoord;
+                        break;
+                    case "policija":
+                        objektuSkripts.policija.GetComponent<RectTransform>().localPosition = objektuSkripts.polKoord;
+                        break;
+                    case "tr1":
+                        objektuSkripts.traktors1.GetComponent<RectTransform>().localPosition = objektuSkripts.tr1Koord;
+                        break;
+                    case "tr5":
+                        objektuSkripts.traktors5.GetComponent<RectTransform>().localPosition = objektuSkripts.tr5Koord;
+                        break;
+                    case "uguns":
+                        objektuSkripts.ugundzeseji.GetComponent<RectTransform>().localPosition = objektuSkripts.ugunsKoord;
+                        break;
+                    default:
 						Debug.Log("Tags nav definēts!");
 						break;
 				}
