@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class Laiks : MonoBehaviour {
 	private float laiks;
-	[HideInInspector] public bool masinasIrSavasVietas;
+	[HideInInspector] public bool irSavasVietas;
 	void Start () {
 		laiks = 0f;
-		masinasIrSavasVietas = false;
+		irSavasVietas = false;
 	}
 
 	void Update () {
-		while (masinasIrSavasVietas == false) {
+		while (irSavasVietas == false) {
 			laiks += Time.deltaTime;
 			Debug.Log (laiks.ToString ("F2"));
 		}
