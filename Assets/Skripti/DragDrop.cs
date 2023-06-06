@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler {
     public Objekti objektuSkripts;
+    [HideInInspector] public Laiks beigaLaiks;
     private CanvasGroup kanvasGrupa;
     private RectTransform velkObjRectTransf;
+    public GameObject ekrans;
+    public Text laikaAttelosana;
     void Start() { 
         kanvasGrupa = GetComponent<CanvasGroup>();
         velkObjRectTransf = GetComponent<RectTransform>();
@@ -35,7 +39,12 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             kanvasGrupa.blocksRaycasts = true;
         }
         else {
+            objektuSkripts.skaita++;
             objektuSkripts.pedejaisVilktais = null;
+            if(objektuSkripts.skaita == 12){
+                ekrans.SetActive(true);
+                laikaAttelosana.text = beigaLaiks.laiks.ToString("F2") + " s";
+            }
         }
         objektuSkripts.irIstajaVieta = false;
     }

@@ -4,17 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Laiks : MonoBehaviour {
-	private float laiks;
-	[HideInInspector] public bool irSavasVietas;
+	[HideInInspector] public float laiks;
+	public Objekti objektuSkripts;
 	void Start () {
 		laiks = 0f;
-		irSavasVietas = false;
 	}
 
 	void Update () {
-		while (irSavasVietas == false) {
-			laiks += Time.deltaTime;
-			Debug.Log (laiks.ToString ("F2"));
-		}
+        laiks += Time.deltaTime;
 		}
 }

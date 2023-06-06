@@ -11,6 +11,8 @@ public class Objekti : MonoBehaviour {
 	public AudioClip[] skanas;
 	[HideInInspector]
 	public bool irIstajaVieta = false;
+	[HideInInspector]
+	public int skaita = 0;
 	public GameObject pedejaisVilktais = null;
 	void Start () {
 		atkrMKoord = atkritumuMasina.GetComponent<RectTransform>().localPosition;
