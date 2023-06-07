@@ -1,0 +1,45 @@
+Initialize engine version: 5.5.6f1 (3fb31a95adee)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 600 (ID=0x3185)
+    Vendor:   Intel
+    VRAM:     1109 MB
+    Driver:   26.20.100.7925
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.040 seconds
+Platform assembly: C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Vsevolods\Desktop\DragAndDrop\Spēles Bērniem_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.692900 ms
+The referenced script on this Behaviour (Game Object 'SkriptuTuretajs') is missing!
+ 
+(Filename:  Line: 1755)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.360600 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 507.
+Total: 6.436400 ms (FindLiveObjects: 0.103500 ms CreateObjectMapping: 0.024300 ms MarkObjects: 0.471600 ms  DeleteObjects: 5.835000 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.454300 ms
+
+Unloading 69 unused Assets to reduce memory usage. Loaded Objects now: 275.
+Total: 11.326600 ms (FindLiveObjects: 0.062200 ms CreateObjectMapping: 0.023500 ms MarkObjects: 0.293700 ms  DeleteObjects: 10.945200 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 31fc -> priority: 1 

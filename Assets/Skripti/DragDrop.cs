@@ -6,15 +6,24 @@ using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler {
     public Objekti objektuSkripts;
-    [HideInInspector] public Laiks beigaLaiks;
+	[HideInInspector] public float laiks, beigaLaiks;
     private CanvasGroup kanvasGrupa;
     private RectTransform velkObjRectTransf;
-    public GameObject ekrans;
+    public GameObject ekrans, bZvaigzne, sZvaigzne, zZvaigzne;
     public Text laikaAttelosana;
+	public Button poga;
     void Start() { 
         kanvasGrupa = GetComponent<CanvasGroup>();
         velkObjRectTransf = GetComponent<RectTransform>();
+		laiks = 0f;													//Spéles sákumá annulé laiku
+		bZvaigzne.SetActive (false);								//Paslepj visas zvaigznes, lai bútu vieglák rádít vińus péc tam
+		sZvaigzne.SetActive (false);
+		zZvaigzne.SetActive (false);
+		poga.GetComponent<Button> ().interactable = true;			//Poga, kura ir atbildíga par párvietośanu uz sákumu sákumá ir stradośa
     }
+	void Update(){
+		laiks += Time.deltaTime;								   //Katru kadru laiks palielinás par to deltu
+	}
 
     public void OnBeginDrag(PointerEventData eventData){
         Debug.Log("Uzklikšķināts uz velkama objekta!");
@@ -42,8 +51,20 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             objektuSkripts.skaita++;
             objektuSkripts.pedejaisVilktais = null;
             if(objektuSkripts.skaita == 12){
-                ekrans.SetActive(true);
-                laikaAttelosana.text = beigaLaiks.laiks.ToString("F2") + " s";
+				beigaLaiks = laiks;																		//Kad visas maśínas ir savás vietás, mainígais saglabá laika vértíbu
+				if (beigaLaiks < 100) {
+					bZvaigzne.SetActive (true);															//Balstoties uz mainígas vértíbu parádas zvaigznes
+					sZvaigzne.SetActive (true);
+					zZvaigzne.SetActive (true);
+				} else if (beigaLaiks >= 100 && beigaLaiks < 200) {
+					bZvaigzne.SetActive (true);
+					sZvaigzne.SetActive (true);
+				} else {
+					bZvaigzne.SetActive (true);
+				}
+                ekrans.SetActive(true);																	//Parádas uzvaras ekráns
+				laikaAttelosana.GetComponent<Text>().text = beigaLaiks.ToString("F2")+" s";				//Attelo laiku
+				poga.GetComponent<Button> ().interactable = false;										//Nońemta iespéja uzklikśḱinát uz pogu, jo uzvaras ekráná táda jau eksisté
             }
         }
         objektuSkripts.irIstajaVieta = false;
